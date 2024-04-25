@@ -467,6 +467,7 @@ def login():
 			sy2 = json.loads(sy.text)['name']
 			sy3 = json.loads(sy.text)['id']
 			menu(sy2,sy3)
+			main_menu(sy2,sy3)
 		except KeyError:
 			login_lagi334()
 		except requests.exceptions.ConnectionError:
@@ -559,7 +560,7 @@ def menu(my_id,my_name):
 		animation(' [×] SELECT CORRECTLY ')
 		back()
 #-----------------[ HASIL-CRACK ]-----------------#
-def main_menu():
+def main_menu(my_id,my_name):
 	try:
 		token = open('.listrik.txt','r').read()
 		cok = open('.kueh.txt','r').read()
